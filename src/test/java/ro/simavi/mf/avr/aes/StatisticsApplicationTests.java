@@ -10,8 +10,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = PoemApplicationTests.class)
-class PoemApplicationTests {
+@SpringBootTest(classes = StatisticsApplicationTests.class)
+class StatisticsApplicationTests {
 
     @Autowired
     private ApplicationContext applicationContext;

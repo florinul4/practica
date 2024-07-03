@@ -8,10 +8,10 @@ import org.springframework.context.ConfigurableApplicationContext;
  * Clasa principala de initializare a aplicatiei
  */
 @SpringBootApplication
-public class PoemApplication {
+public class StatisticsApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(PoemApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(StatisticsApplication.class, args);
     }
     
     
