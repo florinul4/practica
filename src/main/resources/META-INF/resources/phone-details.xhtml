@@ -39,6 +39,10 @@
                 <h:outputText value="#{detailsVar.dataPhoneDetails.getPrice()}"/>
             </p:column>
 
+            <p:column headerText="Anul" sortBy="#{detailsVar.dataPhoneDetails.getYear()}" filterBy="#{detailsVar.dataPhoneDetails.getYear()}">
+                <h:outputText value="#{detailsVar.dataPhoneDetails.getYear()}"/>
+            </p:column>
+
 
         </p:dataTable>
 
