@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+    <fontFamily name="Arial Narrow">
+        <normal><![CDATA[fonts/arialn/LiberationSansNarrow.ttf]]></normal>
+        <bold><![CDATA[fonts/arialn/LiberationSansNarrow-Bold.ttf]]></bold>
+        <italic><![CDATA[fonts/arialn/LiberationSansNarrow-Italic.ttf]]></italic>
+        <bolditalic><![CDATA[fonts/arialn/LiberationSansNarrow-BoldItalic.ttf]]></bolditalic>
+        <pdfEncoding><![CDATA[CP1250]]></pdfEncoding>
+        <pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+        <exportFonts/>
+    </fontFamily>
+</fontFamilies>

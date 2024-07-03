@@ -1,0 +1,270 @@
+/* ========== North Panel CSS =============*/
+.menu-bar {
+    display: flex;
+    width: 100%;
+    height: 55px
+}
+
+.left-buttons-group {
+    display: flex;
+    width: 33%;
+    align-items: center
+}
+
+.left-buttons-group-container {
+    display: flex;
+    margin-left: 18%
+}
+
+.menu-bar-h2-container {
+    width: 33%;
+    height: inherit
+}
+
+.menu-bar-h2-container h2 {
+    text-align: center;
+    line-height: 1;
+    font-weight: 400;
+    font-size: clamp(0.625rem, 0.5469rem + 0.625vw, 1.5625rem);
+}
+
+.right-buttons-group-container {
+    display: flex;
+    width: 33%;
+    height: inherit;
+    align-items: center;
+    justify-content: flex-end
+}
+
+
+
+.welcome-span {
+    margin-left: 2%;
+    color: #6986d2;
+    font-style: italic;
+}
+
+.username-span {
+    color: white;
+    font-weight: bold;
+}
+
+.button-flat {
+    background-color: #0c2979 !important;
+    color: white !important;
+    height: 35px !important;
+    width: 40px !important;
+    border-color: transparent !important;
+    margin-left: 2% !important;
+    border-radius: 0 !important;
+}
+
+.button-flat:hover {
+    background-color: #e9ecef !important;
+    color: #153487 !important;
+}
+
+.button-flat:focus {
+    box-shadow: none !important;
+}
+
+.button-flat-language-selector {
+    background-color: #0c2979 !important;
+    color: white !important;
+    border-color: transparent !important;
+    font-weight: 700;
+    border-radius: 0 !important;
+}
+
+.button-flat-language-selector:hover {
+    background-color: #e9ecef !important;
+    color: #153487 !important;
+}
+
+.button-flat-language-selector:focus {
+    box-shadow: none !important;
+}
+
+.round-button {
+    border-radius: 50% !important;
+}
+
+@media (max-width: 1120px) {
+    .menu-bar-h2-container h2 {
+        display: none;
+    }
+
+    .right-buttons-group-container{
+        width: 40%;
+    }
+}
+
+/*===================== END ====================*/
+
+
+/*===================== Side Panel CSS ===============*/
+
+/* disable default west panel menu toggle */
+.ui-layout-toggler-west-open {
+    display: none !important;
+}
+
+body .ui-panelmenu h3.ui-panelmenu-header {
+    background-color: #153487;
+    color: white;
+}
+
+body .ui-panelmenu h3.ui-panelmenu-header.ui-state-active:hover {
+    background-color: #9bb5ff;
+    color: #153487;
+}
+
+body .ui-panelmenu h3.ui-panelmenu-header:hover {
+    background-color: #9bb5ff;
+    color: #153487;;
+}
+
+body .ui-panelmenu .ui-panelmenu-panel .ui-panelmenu-header.ui-state-active {
+    background-color: #0c2979;
+    color: white;
+}
+
+body .ui-panelmenu .ui-panelmenu-content {
+    background-color: #163588;
+}
+
+body .ui-panelmenu .ui-panelmenu-content:hover {
+    background-color: #395cbf !important;
+    color: #153487 !important;
+}
+
+body .ui-panelmenu .ui-panelmenu-content .ui-menuitem-link.ui-state-hover {
+    background-color: #9bb5ff;
+    color: #153487;
+}
+
+body .ui-panelmenu h3.ui-panelmenu-header {
+    border: none !important;
+    border-bottom: 3px solid #0c2979 !important;
+}
+
+body .ui-panelmenu .ui-panelmenu-content {
+    border: none !important;
+    border-bottom: 3px solid #0c2979 !important;
+
+}
+
+
+/* side menu icons */
+body .ui-panelmenu h3.ui-panelmenu-header .ui-icon.ui-icon-triangle-1-s:before {
+    content: "\e90f";
+}
+
+body .ui-panelmenu h3.ui-panelmenu-header .ui-icon.ui-icon-triangle-1-e:before {
+    content: "\e90d";
+}
+
+body .ui-panelmenu .ui-icon {
+    color: white !important;
+}
+
+body .ui-panelmenu .ui-panelmenu-content .ui-menuitem-link {
+    color: white;
+}
+
+.side-menu-ncts-h2 {
+    color: #3b5dbc;
+    font-style: italic;
+    padding-left: 20%;
+}
+
+/* side menu icons end */
+
+
+/*=============== END =========================================*/
+
+/* buttons text style */
+body .ui-button.ui-button-text-only .ui-button-text {
+    padding: 0.1rem 1rem;
+}
+
+
+/* =============== Template layout panels style =============== */
+
+#center-pnl {
+    z-index: -1
+}
+
+#west-pnl {
+    overflow-x: auto;
+    z-index: 999 !important;
+    background-color: #163588;
+    inset: 54px auto 51px 0px !important;
+    height: auto !important;
+}
+
+#north-pnl {
+    background-color: #23439aeb;
+    color: white;
+}
+
+#south-pnl{
+    background-color: #DEECF5;
+}
+
+.footer-container {
+    color: #284ca3;
+    opacity: 0.9;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+    margin: 0 auto;
+}
+
+@media (min-width: 0px) {
+    .footer-container {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .footer-container {
+        width: 55%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .footer-container {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .footer-container {
+        width: 30%;
+    }
+}
+
+/* home button from footer */
+.home-link {
+    color: #284ca3;
+    text-decoration: none;
+}
+
+.simavi-txt{
+    color: black;
+}
+
+.errorClass {
+    border-bottom-color: red;
+    border-bottom-width: medium;
+}
+
+.goodsItemButton{
+    padding:10px;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+/* ==================== End ======================================= */

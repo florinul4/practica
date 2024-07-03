@@ -1,0 +1,139 @@
+#actionToolbar{
+    position: sticky !important;
+    top: 36px;
+    z-index: 55;
+    width: 100%;
+}
+
+body .ui-toolbar{
+    padding: 0 1rem;
+}
+
+body .goods-select-panel {
+    position: sticky;
+    box-shadow: -4px 13px 8px -8px #ececec;
+    top: 115px;
+    background: #f8f9fa;
+    z-index: 100;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    width: 100%;
+    margin-top: -19px;
+}
+
+body .goods-select-panel .ui-scrollpanel{
+    border: none;
+}
+
+
+body .goods-select-panel .goodsDataAreaButtons{
+    max-height: 80px;
+    overflow-y: auto;
+    width: 100%;
+
+}
+
+
+body .ui-button.ui-button-icon-only{
+    height: 29px;
+    width: 38px;
+}
+.declarationAdditionalInfo{
+    position: absolute;
+    top: -38px;
+    z-index: 100;
+    right: 0;
+
+}
+
+
+#exportDeclaration > ul li.ui-tabs-header{
+    background-color: transparent;
+}
+
+#exportDeclaration >  .ui-tabs-nav li.ui-tabs-header a{
+    color: #4f5159;
+}
+
+#exportDeclaration > .ui-tabs-nav li.ui-tabs-header.ui-state-active a{
+    color: #2196F3;
+}
+
+
+#center-pnl .card .ui-tabs-nav{
+    position: fixed;
+    top: 144px;
+    z-index: 55;
+    box-shadow: -4px 13px 8px -8px #ececec;
+}
+body .ui-toolbar-group-right .ui-panel .ui-panel-content button{
+ margin-left: 0.3rem;
+}
+
+body .ui-panel .ui-panel-content button{
+    padding: 0;
+}
+
+body .ui-panel .ui-panel-content button .ui-button-text{
+    padding: 0.1rem 0.5rem;
+}
+
+body .ui-dialog.ui-confirm-dialog .ui-dialog-content > span{
+    line-height: 1.5rem;
+}
+
+#center-pnl > .card {
+    padding-top: 85px;
+}
+
+
+
+body .ui-tabs .ui-tabs-panels .ui-tabs-panel{
+    padding: 0;
+}
+
+#actionToolbar .form-save-button{
+    z-index: 500;
+}
+
+.invalid {
+    border-color: #d32f2f;
+}
+
+body .ui-breadcrumb{
+    position: fixed;
+}
+
+
+.green {
+    background-color: #e7fad4 !important;
+    background-image: none !important;
+}
+.red {
+    background-color: #ffdddd !important;
+    background-image: none !important;
+}
+.blue {
+    background-color: #8ca1fd !important;
+    background-image: none !important;
+}
+.orange {
+    background-color: #fce2cd !important;
+    background-image: none !important;
+}
+
+
+#exportDeclaration > .ui-tabs-panels > .ui-tabs-panel:nth-child(3){
+    margin-top: -80px;
+}
+
+.ui-cell-editor-output {
+    word-break: break-all;
+    word-wrap: break-word;
+    width: 100%;
+    white-space: break-spaces;
+}
+
+.ui-blockui.custom-blockui {
+    background-color: rgba(255, 255, 255, 0.1);
+}
