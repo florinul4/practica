@@ -31,12 +31,12 @@
                 <h:outputText value="#{detailsVar.name}"/>
             </p:column>
 
-            <p:column headerText="Culoare" sortBy="#{detailsVar.dataPhoneDetails().getColor()!=null?detailsVar.dataPhoneDetails().getColor():detailsVar.dataPhoneDetails().getColorX2()}" filterBy="#{detailsVar.dataPhoneDetails().getColor()!=null?detailsVar.dataPhoneDetails().getColor():detailsVar.dataPhoneDetails().getColorX2()}">
-                <h:outputText value="#{detailsVar.dataPhoneDetails().getColor()!=null?detailsVar.dataPhoneDetails().getColor():detailsVar.dataPhoneDetails().getColorX2()}"/>
+            <p:column headerText="Culoare" sortBy="#{detailsVar.dataPhoneDetails.getColor()!=null?detailsVar.dataPhoneDetails.getColor():detailsVar.dataPhoneDetails.getColorX2()}" filterBy="#{detailsVar.dataPhoneDetails.getColor()!=null?detailsVar.dataPhoneDetails.getColor():detailsVar.dataPhoneDetails.getColorX2()}">
+                <h:outputText value="#{detailsVar.dataPhoneDetails.getColor()!=null?detailsVar.dataPhoneDetails.getColor():detailsVar.dataPhoneDetails.getColorX2()}"/>
             </p:column>
 
-            <p:column headerText="Pret" sortBy="#{detailsVar.dataPhoneDetails().getPrice()}" filterBy="#{detailsVar.dataPhoneDetails().getPrice()}">
-                <h:outputText value="#{detailsVar.dataPhoneDetails().getPrice()}"/>
+            <p:column headerText="Pret" sortBy="#{detailsVar.dataPhoneDetails.getPrice()}" filterBy="#{detailsVar.dataPhoneDetails.getPrice()}">
+                <h:outputText value="#{detailsVar.dataPhoneDetails.getPrice()}"/>
             </p:column>
 
 

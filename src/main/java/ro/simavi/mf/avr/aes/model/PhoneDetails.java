@@ -11,6 +11,6 @@ import lombok.Setter;
  public class PhoneDetails {
     public String id;
     public String name;
-    @JsonProperty("dataPhoneDetails")
+    @JsonProperty("data")
     public DataPhoneDetails dataPhoneDetails;
 }
