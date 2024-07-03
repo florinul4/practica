@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>ro.simavi.mf.avr</groupId>
-    <artifactId>poem</artifactId>
+    <artifactId>statistics</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>poem</name>
     <description>Site de poezii</description>
