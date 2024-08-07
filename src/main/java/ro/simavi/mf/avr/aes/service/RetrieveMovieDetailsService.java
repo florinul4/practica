@@ -26,9 +26,10 @@ import java.util.List;
 public class RetrieveMovieDetailsService {
 
 
-    public MovieList getDataSetForCurrentDay() throws IOException, InterruptedException, JAXBException {
+    public MovieList getDataSetForCurrentDay(int page) throws IOException, InterruptedException, JAXBException {
         //URL obj = new URL("https://www.omdbapi.com/?apikey=e7ebad09&i=tt0050083");
-        URL obj = new URL("https://api.themoviedb.org/3/search/movie?query=planet+of+the+apes&api_key=aaac32a07c6685c8e64c8917140bab94");
+        //URL obj = new URL("https://api.themoviedb.org/3/search/movie?query=planet+of+the+apes&api_key=aaac32a07c6685c8e64c8917140bab94");
+        URL obj = new URL("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page="+ page+"&api_key=aaac32a07c6685c8e64c8917140bab94");
         HttpURLConnection httpURLConnection = (HttpURLConnection) obj.openConnection();
         httpURLConnection.setRequestMethod("GET");
         httpURLConnection.setRequestProperty("User-Agent", "Mozilla/5.0");
@@ -61,6 +62,7 @@ public class RetrieveMovieDetailsService {
         return null;
 
     }
+
 
     public <T> T convertXmlToObject(Class<T> clazz, String xml) throws JAXBException {
 

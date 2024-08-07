@@ -33,12 +33,12 @@ public class RetrieveImageDetailsBean implements Serializable {
      * Metoda aceasta se ocupa initializarea formei
      */
     @PostConstruct
-    public void init() {System.out.println("MERGE");
+    public void init() {//System.out.println("MERGE");
         try {
 
             imageList=retrieveImageService.getImageUrl();
-            image_path=imageList.still.third.medium.film_image;
-            System.out.println(image_path);
+            image_path=imageList.still.getStill();
+
 
 
         } catch (IOException | JAXBException | InterruptedException e) {

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+    <h:outputStylesheet library="css" name="image-guessing.css" />
+    <h:outputStylesheet library="css" name="template.css"/>
+    <h1>Guess the movie</h1>
+    <style type="">
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            height: 200px;
+            width: 50%;
+            backround-color:#d3e4d3;
+        }
+        h1{color:#181d1a;}
+    </style>
+</h:head>
+
+<body style="background-color:#7c8477 ">
+<div class="image">
+    <p:graphicImage value="#{retrieveImageDetailsBean.image_path}"/>
+</div>
+</body>
+
+</html>
+

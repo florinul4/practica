@@ -41,6 +41,7 @@
         </dependencies>
     </dependencyManagement>
             <dependencies>
+                <!-- https://mvnrepository.com/artifact/org.primefaces/primefaces -->
                 <dependency>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-web</artifactId>
@@ -122,6 +123,7 @@
                     <artifactId>junit-jupiter-api</artifactId>
                 </dependency>
             </dependencies>
+
     <build>
         <plugins>
             <plugin>

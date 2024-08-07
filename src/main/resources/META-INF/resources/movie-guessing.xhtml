@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>website</title>
+    <!-- CSS -->
+
+    <style type="">
+
+        .flex-container {
+        display: flex;
+        flex-direction: column;
+        height:100vh;
+        justify-content: center;
+        align-items: center;
+
+        }
+
+
+        .flex-container > div {
+
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+        }
+
+        h1 { color: #8b5760}
+        p {
+            font-size: 20px;
+            color:#edd8bd;
+            width:50vh;
+        }
+        div {text-align: center;}
+
+        commandButton {
+            background-color:#8b5760;!important;
+            color:#edd8bd;
+            font-size: 16px;
+            font-weight: 400;
+            border: none;
+            cursor: pointer;
+        }
+        form{
+            background-color:#8b5760;!important;
+            color:#edd8bd;
+            font-size: 16px;
+            font-weight: 400;
+            border: none;
+            cursor: pointer;
+        }
+
+
+
+    h1,p,button,input{font-family: "Segoe UI", Arial, sans-serif;}
+    </style>
+
+
+</h:head>
+<body style="background-color: #3b313c ">
+<script>
+    console.log('This is a debug message.');
+</script>
+<div class="flex-container" >
+    <h1> Try guessing the movie based on the following synopsis. </h1>
+   <p> <h:outputText value="#{retrieveMovieDetailsBean.movie_synopsis}"/> </p>
+
+    <h:form>
+        <p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true"/>
+        <div class="field col-12 md:col-4">
+        <p:outputLabel value="" for="@next"/>
+
+            <p:autoComplete id="autocomplete" value="#{retrieveMovieDetailsBean.selectedItem}" completeMethod="#{retrieveMovieDetailsBean.getCountryList}"
+                            placeholder="Movie" scrollHeight="250" styleClass=".ui-autocomplete"/>
+
+            <p:commandButton value="Submit"
+                             action="#{retrieveMovieDetailsBean.processSelection}"
+                             update="result"
+                              />
+        </div>
+
+
+    </h:form>
+
+    <p><h:outputText id="result" value="#{retrieveMovieDetailsBean.outputText}"/></p>
+    <script>
+        console.log('This is a bug.');
+    </script>
+</div>
+</body>
+</html>

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 import ro.simavi.mf.avr.aes.model.ImageList;
 
+import java.util.Random;
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.io.BufferedReader;
@@ -14,7 +15,12 @@ import java.net.URL;
 
 public class RetrieveImageService {
     public ImageList getImageUrl() throws IOException, InterruptedException, JAXBException {
-        URL url = new URL("https://api-gate2.movieglu.com/images/?film_id=184126");
+        String[] film_list={"The Adventures of Priscilla, Queen of the Desert","From Dusk Till Dawn","Raiders of the Lost Ark","There will be Blood","The Fall","The Martian"};
+        String[] film_id_list={"1685","3427","7772","59906","62407","184126"};
+        Random rand = new Random();
+        int film_id=rand.nextInt(film_id_list.length);
+        String film_url="https://api-gate2.movieglu.com/images/?film_id=" + film_id_list[film_id];
+        URL url = new URL(film_url);
         HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
         httpURLConnection.setRequestMethod("GET");
 
@@ -25,7 +31,7 @@ public class RetrieveImageService {
         httpURLConnection.setRequestProperty("territory", "XX");
         httpURLConnection.setRequestProperty("client", "MOIF");
         int responseCode = httpURLConnection.getResponseCode();
-        System.out.println("GET Response Code :: " + responseCode);
+        System.out.println("GET Image Response Code :: " + responseCode);
         if (responseCode == HttpURLConnection.HTTP_OK) { // success
             BufferedReader in = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
             String inputLine;

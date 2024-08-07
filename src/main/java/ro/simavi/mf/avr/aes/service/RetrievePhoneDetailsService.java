@@ -16,16 +16,21 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
 
 @Service
-public class RetrivePhoneDetailsService {
+public class RetrievePhoneDetailsService {
 
 
     public PhoneDetails[] getDataSetForCurrentDay() throws IOException, InterruptedException, JAXBException {
-        URL obj = new URL("https://api.restful-api.dev/objects");
+        URL obj = new URL("https://6685564db3f57b06dd4c564a.mockapi.io/practica/users");
         HttpURLConnection httpURLConnection = (HttpURLConnection) obj.openConnection();
         httpURLConnection.setRequestMethod("GET");
         httpURLConnection.setRequestProperty("User-Agent", "Mozilla/5.0");
+        String basicAuth = Base64.getEncoder().encodeToString(("Joe"+":"+"password").getBytes(StandardCharsets.UTF_8));
+        httpURLConnection.setRequestProperty ("Authorization", "Basic "+basicAuth);
         int responseCode = httpURLConnection.getResponseCode();
         System.out.println("GET Response Code :: " + responseCode);
         if (responseCode == HttpURLConnection.HTTP_OK) { // success

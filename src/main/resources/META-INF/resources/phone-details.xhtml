@@ -16,7 +16,7 @@
 <div class="card">
     <h:form id="detailsId">
 
-        <p:dataTable var="detailsVar" value="#{retrivePhoneDetailsBean.dataList}" widgetVar="detailsVar"
+        <p:dataTable var="detailsVar" value="#{retrievePhoneDetailsBean.dataList}" widgetVar="detailsVar"
                      rows="10"
                      paginator="true"
                      paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
@@ -24,24 +24,24 @@
                      rowsPerPageTemplate="5,10,50,{ShowAll|'All'}">>
 
             <f:facet name="header">
-                <span>Lista telefoane detaliate</span>
+                <span>Lista persoane detaliate</span>
             </f:facet>
 
             <p:column headerText="Nume" sortBy="#{detailsVar.name}" filterBy="#{detailsVar.name}">
                 <h:outputText value="#{detailsVar.name}"/>
             </p:column>
 
-            <p:column headerText="Culoare" sortBy="#{detailsVar.dataPhoneDetails.getColor()!=null?detailsVar.dataPhoneDetails.getColor():detailsVar.dataPhoneDetails.getColorX2()}" filterBy="#{detailsVar.dataPhoneDetails.getColor()!=null?detailsVar.dataPhoneDetails.getColor():detailsVar.dataPhoneDetails.getColorX2()}">
-                <h:outputText value="#{detailsVar.dataPhoneDetails.getColor()!=null?detailsVar.dataPhoneDetails.getColor():detailsVar.dataPhoneDetails.getColorX2()}"/>
+            <p:column headerText="Telefon" sortBy="#{detailsVar.phone}" filterBy="#{detailsVar.phone}">
+                <h:outputText value="#{detailsVar.phone}"/>
             </p:column>
 
-            <p:column headerText="Pret" sortBy="#{detailsVar.dataPhoneDetails.getPrice()}" filterBy="#{detailsVar.dataPhoneDetails.getPrice()}">
-                <h:outputText value="#{detailsVar.dataPhoneDetails.getPrice()}"/>
+            <p:column headerText="Timp" sortBy="#{detailsVar.time}" filterBy="#{detailsVar.time}">
+                <h:outputText value="#{detailsVar.time}"/>
             </p:column>
 
-            <p:column headerText="Anul" sortBy="#{detailsVar.dataPhoneDetails.getYear()}" filterBy="#{detailsVar.dataPhoneDetails.getYear()}">
-                <h:outputText value="#{detailsVar.dataPhoneDetails.getYear()}"/>
-            </p:column>
+            <!--<p:column headerText="Data" sortBy="#{detailsVar.date}" filterBy="#{detailsVar.date}">
+                <h:outputText value="#{detailsVar.date}"/>
+            </p:column>-->
 
 
         </p:dataTable>

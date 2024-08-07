@@ -21,5 +21,5 @@ public class MovieList  {
     @JsonProperty("results")
     public MovieDetails[] results;
 
-    //public int id;
+
 }
